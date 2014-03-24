@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+    h1 UserList
+    table
+        tr
+            th FirstName
+            th LastName
+        for result in results
+            tr
+                td= result.firstName
+                td= result.lastName
+                td
+                    a(href=result.id) detail
