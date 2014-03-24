@@ -20,6 +20,6 @@ module.exports = (grunt) ->
           script: "./bin/www"
 
   grunt.registerTask "delay", "Delay for express restart", ->
-    setTimeout @async(), 500
+    setTimeout @async(), 1000
 
   grunt.registerTask "default", ["express:dev", "watch" ]
