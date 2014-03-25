@@ -76,7 +76,7 @@ exports.addUser = function(req, res) {
       res.send({'error': 'An error has occurred'});
     } else {
       console.log('Success: ' + JSON.stringify(result));
-      res.json(result);
+      res.redirect("/users");
     }
   });
 };

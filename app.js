@@ -26,7 +26,7 @@ app.use(app.router);
 app.get('/', routes.index);
 app.get('/users', users.findAll);
 app.get('/users/:id', users.findById);
-//app.post('/users', users.addUser);
+app.post('/users', users.addUser);
 //app.put('/users/:id', users.updateUser);
 //app.delete('/users/:id', users.deleteUser);
 

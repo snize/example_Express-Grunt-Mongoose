@@ -12,3 +12,11 @@ block content
                 td= result.lastName
                 td
                     a(href='/users/' + result.id) detail
+
+    h2 Add User
+    form(action='/users', method='post')
+        input(type='text', name="firstName", placeholder="firstName")
+        input(type='text', name="lastName", placeholder="lastName")
+        input(type='text', name="age", placeholder="age")
+        input(type='hidden', name="active")
+        input(type='submit', value='submit')
