@@ -11,3 +11,7 @@ block content
         dd= result.age
         dt Date
         dd= result.date
+
+    form(action='/users/' + result.id, method='post')
+        input(type="hidden", name="_method", value="delete" )
+        input(type="submit", value="delete" )

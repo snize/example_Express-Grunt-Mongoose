@@ -19,6 +19,7 @@ app.use(favicon());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
+app.use(express.methodOverride());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(app.router);
@@ -28,7 +29,7 @@ app.get('/users', users.findAll);
 app.get('/users/:id', users.findById);
 app.post('/users', users.addUser);
 //app.put('/users/:id', users.updateUser);
-//app.delete('/users/:id', users.deleteUser);
+app.delete('/users/:id', users.deleteUser);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {

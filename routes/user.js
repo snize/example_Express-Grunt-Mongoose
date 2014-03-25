@@ -106,7 +106,7 @@ exports.deleteUser = function(req, res) {
       res.send({'error': 'An error has occurred - ' + err});
     } else {
       console.log('Success: ' + result + ' document(s) deleted');
-      res.send(req.body);
+      res.redirect("/users");
     }
   });
 };
